@@ -1,30 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Tienda | Dulce Sabor</title>
-    <link rel="stylesheet" href="css/estilos.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Nuestros Pasteles</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Dulce Sabor</title>
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Aquí debes incluir tu archivo de CSS -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Dulce Sabor">
+        </div>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="contacto.html">Contacto</a>
-          </nav>
-      </header>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <main>
+    <!-- Sección Tienda -->
+    <main>
+        <h1>Bienvenidos a nuestra Tienda</h1>
+        <p>Descubre nuestros deliciosos pasteles hechos con amor y los mejores ingredientes. ¡Un dulce para cada momento!</p>
+
+        <!-- Contenedor de pasteles -->
         <section class="productos">
-          <!-- Completar aquí con al menos 6 pasteles con imagen, nombre y precio -->
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="pastel1.jpg" alt="Pastel de chocolate">
+                <h3>Pastel de Chocolate</h3>
+                <p class="precio">$15.00</p>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="detalles">
+                    <p>Hecho con chocolate de la más alta calidad, relleno de ganache y decorado con crema chantilly.</p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="pastel2.jpg" alt="Pastel Red Velvet">
+                <h3>Pastel Red Velvet</h3>
+                <p class="precio">$18.00</p>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="detalles">
+                    <p>Una mezcla suave de cacao y vainilla, con una capa de queso crema que le da un toque especial.</p>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="pastel3.jpg" alt="Pastel de Fresa">
+                <h3>Pastel de Fresa</h3>
+                <p class="precio">$12.00</p>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="detalles">
+                    <p>Preparado con fresas frescas, crema pastelera y un toque de vainilla.</p>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="pastel4.jpg" alt="Pastel de Vainilla">
+                <h3>Pastel de Vainilla</h3>
+                <p class="precio">$10.00</p>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="detalles">
+                    <p>Un clásico pastel de vainilla, relleno de crema de mantequilla con un toque de limón.</p>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="pastel5.jpg" alt="Pastel de Limón">
+                <h3>Pastel de Limón</h3>
+                <p class="precio">$14.00</p>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="detalles">
+                    <p>Suave pastel de limón con una crema de limón meringada y decorado con ralladura de limón.</p>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="pastel6.jpg" alt="Pastel de Zanahoria">
+                <h3>Pastel de Zanahoria</h3>
+                <p class="precio">$16.00</p>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="detalles">
+                    <p>Un pastel delicioso y húmedo con zanahoria rallada, nueces y especias, cubierto con crema de queso.</p>
+                </div>
+            </div>
         </section>
-      </main>
+    </main>
 
-      <footer>
-        <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
-      </footer>
-    </div>
-  </body>
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Dulce Sabor - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Script para mostrar/ocultar los detalles de cada producto
+        document.querySelectorAll('.ver-mas-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                const detalles = button.nextElementSibling; // el div con la clase "detalles"
+                detalles.classList.toggle('mostrar'); // alterna la visibilidad
+            });
+        });
+    </script>
+</body>
 </html>

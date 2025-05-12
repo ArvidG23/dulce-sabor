@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Dulce Sabor</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto - Dulce Sabor</h1>
+    </header>
+
+    <main>
+        <!-- Información de contacto -->
+        <section id="info-contacto">
+            <h2>Información de Contacto</h2>
+            <p><strong>Nombre:</strong> Arvid Garcia</p>
+            <p><strong>Dirección:</strong> Quito, Avenida 12 de octubre</p>
+            <p><strong>Teléfono:</strong> 0963183798</p>
+            <p><strong>Email:</strong> <a href="mailto:arvidgarcia23@gmail.com">arvidgarcia23@gmail.com</a></p>
+            <p><strong>Horarios de atención:</strong> Lunes a Viernes de 9:00 a 19:00, con cierre de 13:00 a 14:00 para almuerzo.</p>
+            <p><strong>Síguenos en nuestras redes sociales:</strong></p>
+            <p>
+                <a href="https://www.instagram.com/yosoyarvid" target="_blank">Instagram</a> |
+                <a href="https://www.tiktok.com/@yosoyarvid" target="_blank">TikTok</a>
+            </p>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="formulario-contacto">
+            <h2>Formulario de Contacto</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="pastel">Tipo de Pastel:</label>
+                <select id="pastel" name="pastel">
+                    <option value="chocolate">Pastel de Chocolate</option>
+                    <option value="vainilla">Pastel de Vainilla</option>
+                    <option value="fresa">Pastel de Fresa</option>
+                    <option value="frutos_rojos">Pastel de Frutos Rojos</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required>¡Nos encantaría saber cómo podemos endulzar tu día! ¿Algún pastel especial que te gustaría probar o alguna idea que quieras compartir con nosotros?</textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dulce Sabor - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

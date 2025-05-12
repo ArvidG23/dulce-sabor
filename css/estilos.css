@@ -1,20 +1,192 @@
-/* estilos.css - Estilos base para Dulce Sabor */
+/* Fuentes retro */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
 
+/* Estilos generales */
 body {
-    background-color: #fff8f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f4f1e1; /* Beige suave */
+    color: #5f4b56; /* Gris oscuro suave */
     margin: 0;
     padding: 0;
-    color: #4b2e2e;
 }
 
-.container {
-    width: 900px;
-    margin: 0 auto;
+/* Encabezado */
+header {
+    background-color: #f8d6c1; /* Rosa pastel */
+    text-align: center;
+    padding: 40px 0;
+    font-size: 2.8rem;
+    color: #5f4b56;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 4px solid #e3b7a0; /* Límite suave de color */
+    letter-spacing: 2px;
 }
 
-header, footer {
-    background-color: #f4d3c2;
-    padding: 1em;
-    margin-bottom: 1em;
+header h1 {
+    margin: 0;
+}
+
+/* Información de contacto */
+#info-contacto {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#info-contacto h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d67f6e; /* Color vintage */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#info-contacto p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+#info-contacto a {
+    color: #d67f6e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Estilo del formulario */
+#formulario-contacto {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-contacto h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d67f6e;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formulario-contacto label {
+    font-size: 1.1rem;
+    color: #5f4b56;
+}
+
+#formulario-contacto input, 
+#formulario-contacto select, 
+#formulario-contacto textarea {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 2px solid #d67f6e;
+    border-radius: 5px;
+    background-color: #faf0e6; /* Blanco roto */
+    transition: all 0.3s ease;
+}
+
+#formulario-contacto input:focus, 
+#formulario-contacto select:focus, 
+#formulario-contacto textarea:focus {
+    border-color: #d67f6e;
+    background-color: #fff0e1;
+}
+
+#formulario-contacto button {
+    background-color: #d67f6e;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#formulario-contacto button:hover {
+    background-color: #b7645a;
+}
+
+/* Productos - Diseño Retro */
+#productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.producto {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #5f4b56;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 1.2rem;
+    color: #d67f6e;
+    margin-bottom: 15px;
+}
+
+.producto button {
+    background-color: #5f4b56;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #d67f6e;
+}
+
+/* Estilo de footer */
+footer {
+    background-color: #d67f6e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
