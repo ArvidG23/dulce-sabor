@@ -1,66 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dulce Sabor - Panadería y Pastelería</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dulce Sabor</title>
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
 
-    <!-- Encabezado -->
-    <header>
-        <h1>Dulce Sabor</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Dulce Sabor</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Sección de Bienvenida -->
-    <main>
-        <section class="bienvenida">
-            <h2>Bienvenidos a Dulce Sabor</h2>
-            <p>¡Bienvenidos a Dulce Sabor, donde cada bocado es una explosión de frescura y calidad! Disfruta de nuestros deliciosos productos hechos con amor y dedicación.</p>
+  <main class="contenido-inicio">
+    <section class="bienvenida">
+      <h2>¡Bienvenid@! Tu nuevo antojo favorito empieza aquí</h2>
+      <p>Desde el horno hasta tu corazón. Productos horneados frescos, deliciosos y con historia.</p>
+    </section>
 
-            <!-- Sección de promociones -->
-            <div class="promociones">
-                <h3>¡Promociones Especiales!</h3>
-                <div class="promocion">
-                    <h4>1. Descuento por Compra</h4>
-                    <p>Compra un pastel y recibe un 10% de descuento en tu próxima compra. ¡Ven a disfrutar de nuestros productos frescos todos los días!</p>
-                </div>
-                <div class="promocion">
-                    <h4>2. Pan del Día</h4>
-                    <p>Este mes, disfruta de nuestro pan de chocolate con un 20% de descuento. Perfecto para acompañar tu café de la mañana.</p>
-                </div>
-                <div class="promocion">
-                    <h4>3. Combo Familiar</h4>
-                    <p>Compra una caja con 12 galletas variadas y llévate 2 panes grandes gratis. ¡Ideal para compartir en familia!</p>
-                </div>
-            </div>
+    <section class="promociones">
+      <h3>Promociones del Día</h3>
+      <div class="tarjeta-producto">
+        <img src="img/promo1.jpg" alt="Promo 1">
+        <h4>Combo desayuno</h4>
+        <p>$2.50 - Café + croissant</p>
+        <button class="añadir-carrito" onclick="añadirAlCarrito('Combo desayuno', 2.50)">Añadir al carrito</button>
+      </div>
+      <div class="tarjeta-producto">
+        <img src="img/promo2.jpg" alt="Promo 2">
+        <h4>2x1 Pan de chocolate</h4>
+        <p>$1.80</p>
+        <button class="añadir-carrito" onclick="añadirAlCarrito('2x1 Pan de chocolate', 1.80)">Añadir al carrito</button>
+      </div>
+      <div class="tarjeta-producto">
+        <img src="img/promo3.jpg" alt="Promo 3">
+        <h4>Mini pastel + bebida</h4>
+        <p>$3.00</p>
+        <button class="añadir-carrito" onclick="añadirAlCarrito('Mini pastel + bebida', 3.00)">Añadir al carrito</button>
+      </div>
+    </section>
 
-            <!-- Sección de historia -->
-            <div class="historia">
-                <h3>¿Por qué elegirnos?</h3>
-                <p>Dulce Sabor no es solo una pastelería, es una tradición familiar. Fundada hace 10 años por Arvid García, nuestro enfoque ha sido siempre ofrecer productos frescos, artesanales y de la más alta calidad. Nos enorgullece ser parte de la vida de nuestra comunidad, endulzando momentos especiales con cada bocado. Ya sea que busques panes frescos, galletas caseras o un pastel de cumpleaños, ¡en Dulce Sabor tenemos lo mejor para ti!</p>
-            </div>
+    <section class="historia">
+      <h3>Nuestra historia</h3>
+      <p>Nacimos con una receta familiar y muchas ganas de endulzar la vida. Hoy somos el rincón favorito de muchos para desayunar, merendar o simplemente darse un gusto. ❤️</p>
+    </section>
 
-            <!-- Dato curioso -->
-            <div class="dato-curioso">
-                <h3>Dato Curioso</h3>
-                <p>¿Sabías que la primera receta de pan data de hace más de 14,000 años? Desde entonces, el pan ha sido un alimento esencial en casi todas las culturas, ¡y nosotros lo seguimos perfeccionando con mucho cariño!</p>
-            </div>
-        </section>
-    </main>
+    <section class="dato-curioso">
+      <h3>Dato curioso del día</h3>
+      <p>¿Sabías que el primer croissant se horneó en Austria, no en Francia? Nosotros lo hacemos a nuestra manera… ¡y con más relleno!</p>
+    </section>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2025 Dulce Sabor | Todos los derechos reservados.</p>
-    </footer>
+    <!-- Mensaje de confirmación -->
+    <div id="mensaje-confirmacion" style="display:none; color: green; font-weight: bold;">
+      ¡Producto añadido al carrito correctamente!
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dulce Sabor. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let carrito = [];
+
+    // Función para añadir producto al carrito
+    function añadirAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      actualizarCarrito();
+      mostrarMensajeConfirmacion();
+    }
+
+    // Función para actualizar carrito en la página de tienda
+    function actualizarCarrito() {
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+
+    // Función para mostrar mensaje de confirmación
+    function mostrarMensajeConfirmacion() {
+      const mensaje = document.getElementById('mensaje-confirmacion');
+      mensaje.style.display = 'block';
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000); // El mensaje desaparece después de 2 segundos
+    }
+
+  </script>
 
 </body>
 </html>

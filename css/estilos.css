@@ -1,192 +1,170 @@
-/* Fuentes retro */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
-
-/* Estilos generales */
-body {
-    font-family: 'Roboto Slab', serif;
-    background-color: #f4f1e1; /* Beige suave */
-    color: #5f4b56; /* Gris oscuro suave */
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-}
-
-/* Encabezado */
-header {
-    background-color: #f8d6c1; /* Rosa pastel */
-    text-align: center;
-    padding: 40px 0;
-    font-size: 2.8rem;
-    color: #5f4b56;
-    font-family: 'Playfair Display', serif;
-    border-bottom: 4px solid #e3b7a0; /* Límite suave de color */
-    letter-spacing: 2px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Información de contacto */
-#info-contacto {
-    background-color: #ffffff;
-    padding: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#info-contacto h2 {
-    font-family: 'Playfair Display', serif;
-    color: #d67f6e; /* Color vintage */
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#info-contacto p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    text-align: center;
-}
-
-#info-contacto a {
-    color: #d67f6e;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* Estilo del formulario */
-#formulario-contacto {
-    background-color: #ffffff;
-    padding: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#formulario-contacto h2 {
-    font-family: 'Playfair Display', serif;
-    color: #d67f6e;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#formulario-contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#formulario-contacto label {
-    font-size: 1.1rem;
-    color: #5f4b56;
-}
-
-#formulario-contacto input, 
-#formulario-contacto select, 
-#formulario-contacto textarea {
-    padding: 12px;
-    font-size: 1.1rem;
-    border: 2px solid #d67f6e;
-    border-radius: 5px;
-    background-color: #faf0e6; /* Blanco roto */
-    transition: all 0.3s ease;
-}
-
-#formulario-contacto input:focus, 
-#formulario-contacto select:focus, 
-#formulario-contacto textarea:focus {
-    border-color: #d67f6e;
-    background-color: #fff0e1;
-}
-
-#formulario-contacto button {
-    background-color: #d67f6e;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-#formulario-contacto button:hover {
-    background-color: #b7645a;
-}
-
-/* Productos - Diseño Retro */
-#productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 50px 0;
-}
-
-.producto {
-    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Georgia', serif;
+    background-color: #fdf6f0;
+    color: #4b2e2e;
+    line-height: 1.6;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navegación */
+  header {
+    background-color: #fff0e6;
+    padding: 20px 0;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.producto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.producto img {
-    width: 100%;
+    border-bottom: 2px solid #e0c3a0;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #b85c38;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #7b4e3f;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #b85c38;
+  }
+  
+  /* Sección principal */
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fffaf4;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  /* Texto general */
+  p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* Promociones */
+  .promocion {
+    background-color: #fff0e6;
+    border-left: 5px solid #b85c38;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .promocion h3 {
+    color: #b85c38;
+    margin-bottom: 10px;
+  }
+  
+  /* Productos */
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .producto {
+    background-color: #fffaf4;
+    border: 1px solid #e6cfc1;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+  }
+  
+  .producto img {
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.producto h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: #5f4b56;
-    margin-bottom: 10px;
-}
-
-.producto p {
-    font-size: 1.2rem;
-    color: #d67f6e;
-    margin-bottom: 15px;
-}
-
-.producto button {
-    background-color: #5f4b56;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.producto button:hover {
-    background-color: #d67f6e;
-}
-
-/* Estilo de footer */
-footer {
-    background-color: #d67f6e;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
+  }
+  
+  .producto h4 {
+    margin: 10px 0 5px;
+    color: #7b4e3f;
+  }
+  
+  .producto span {
     font-weight: bold;
-}
+    color: #b85c38;
+  }
+  
+  .ver-mas {
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: #b85c38;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .ver-mas:hover {
+    color: #7b4e3f;
+  }
+  
+  .detalle {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #5f4033;
+  }
+  
+  .boton-carrito {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #b85c38;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-carrito:hover {
+    background-color: #7b4e3f;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #a67b68;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    nav a {
+      display: inline-block;
+      margin: 8px;
+    }
+  
+    main {
+      padding: 20px;
+    }
+  }
+  

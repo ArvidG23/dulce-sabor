@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda - Dulce Sabor</title>
-    <link rel="stylesheet" href="css/estilos.css"> <!-- Aquí debes incluir tu archivo de CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <!-- Encabezado -->
+
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo Dulce Sabor">
-        </div>
+        <h1>Dulce Sabor</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -21,89 +19,150 @@
         </nav>
     </header>
 
-    <!-- Sección Tienda -->
     <main>
-        <h1>Bienvenidos a nuestra Tienda</h1>
-        <p>Descubre nuestros deliciosos pasteles hechos con amor y los mejores ingredientes. ¡Un dulce para cada momento!</p>
+        <section id="productos">
+            <h2>Productos Especiales</h2>
+            <div class="productos-container">
+                <!-- Producto 1 -->
+                <div class="producto">
+                    <img src="imagenes/pastel1.jpg" alt="Pastel de Fresa">
+                    <h3>Pastel de Fresa</h3>
+                    <p>$15.00</p>
+                    <button class="ver-mas" onclick="verMas('producto1')">Ver más</button>
+                    <button class="añadir-carrito" onclick="añadirAlCarrito('Pastel de Fresa', 15.00)">Añadir al carrito</button>
+                    <div class="detalle" id="producto1" style="display: none;">
+                        <p>Pastel hecho con fresas frescas y crema batida. Ideal para celebraciones.</p>
+                    </div>
+                </div>
 
-        <!-- Contenedor de pasteles -->
-        <section class="productos">
-            <!-- Producto 1 -->
-            <div class="producto">
-                <img src="pastel1.jpg" alt="Pastel de chocolate">
-                <h3>Pastel de Chocolate</h3>
-                <p class="precio">$15.00</p>
-                <button class="ver-mas-btn">Ver más</button>
-                <div class="detalles">
-                    <p>Hecho con chocolate de la más alta calidad, relleno de ganache y decorado con crema chantilly.</p>
+                <!-- Producto 2 -->
+                <div class="producto">
+                    <img src="imagenes/pan1.jpg" alt="Pan Artesanal">
+                    <h3>Pan Artesanal</h3>
+                    <p>$5.00</p>
+                    <button class="ver-mas" onclick="verMas('producto2')">Ver más</button>
+                    <button class="añadir-carrito" onclick="añadirAlCarrito('Pan Artesanal', 5.00)">Añadir al carrito</button>
+                    <div class="detalle" id="producto2" style="display: none;">
+                        <p>Pan recién horneado con ingredientes naturales y sabor tradicional.</p>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="producto">
+                    <img src="imagenes/galletas.jpg" alt="Galletas de Chocolate">
+                    <h3>Galletas de Chocolate</h3>
+                    <p>$8.00</p>
+                    <button class="ver-mas" onclick="verMas('producto3')">Ver más</button>
+                    <button class="añadir-carrito" onclick="añadirAlCarrito('Galletas de Chocolate', 8.00)">Añadir al carrito</button>
+                    <div class="detalle" id="producto3" style="display: none;">
+                        <p>Galletas crujientes con chispas de chocolate negro. Perfectas para la merienda.</p>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto">
+                    <img src="imagenes/tarta.jpg" alt="Tarta de Limón">
+                    <h3>Tarta de Limón</h3>
+                    <p>$12.00</p>
+                    <button class="ver-mas" onclick="verMas('producto4')">Ver más</button>
+                    <button class="añadir-carrito" onclick="añadirAlCarrito('Tarta de Limón', 12.00)">Añadir al carrito</button>
+                    <div class="detalle" id="producto4" style="display: none;">
+                        <p>Tarta con base crujiente y relleno de limón natural. Refrescante y deliciosa.</p>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="producto">
+                    <img src="imagenes/brownie.jpg" alt="Brownie">
+                    <h3>Brownie</h3>
+                    <p>$6.00</p>
+                    <button class="ver-mas" onclick="verMas('producto5')">Ver más</button>
+                    <button class="añadir-carrito" onclick="añadirAlCarrito('Brownie', 6.00)">Añadir al carrito</button>
+                    <div class="detalle" id="producto5" style="display: none;">
+                        <p>Brownie de chocolate con nueces, suave por dentro y crocante por fuera.</p>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="producto">
+                    <img src="imagenes/torta.jpg" alt="Torta de Chocolate">
+                    <h3>Torta de Chocolate</h3>
+                    <p>$18.00</p>
+                    <button class="ver-mas" onclick="verMas('producto6')">Ver más</button>
+                    <button class="añadir-carrito" onclick="añadirAlCarrito('Torta de Chocolate', 18.00)">Añadir al carrito</button>
+                    <div class="detalle" id="producto6" style="display: none;">
+                        <p>Torta húmeda de chocolate con cobertura intensa. Ideal para los chocoadictos.</p>
+                    </div>
                 </div>
             </div>
-            <!-- Producto 2 -->
-            <div class="producto">
-                <img src="pastel2.jpg" alt="Pastel Red Velvet">
-                <h3>Pastel Red Velvet</h3>
-                <p class="precio">$18.00</p>
-                <button class="ver-mas-btn">Ver más</button>
-                <div class="detalles">
-                    <p>Una mezcla suave de cacao y vainilla, con una capa de queso crema que le da un toque especial.</p>
-                </div>
-            </div>
-            <!-- Producto 3 -->
-            <div class="producto">
-                <img src="pastel3.jpg" alt="Pastel de Fresa">
-                <h3>Pastel de Fresa</h3>
-                <p class="precio">$12.00</p>
-                <button class="ver-mas-btn">Ver más</button>
-                <div class="detalles">
-                    <p>Preparado con fresas frescas, crema pastelera y un toque de vainilla.</p>
-                </div>
-            </div>
-            <!-- Producto 4 -->
-            <div class="producto">
-                <img src="pastel4.jpg" alt="Pastel de Vainilla">
-                <h3>Pastel de Vainilla</h3>
-                <p class="precio">$10.00</p>
-                <button class="ver-mas-btn">Ver más</button>
-                <div class="detalles">
-                    <p>Un clásico pastel de vainilla, relleno de crema de mantequilla con un toque de limón.</p>
-                </div>
-            </div>
-            <!-- Producto 5 -->
-            <div class="producto">
-                <img src="pastel5.jpg" alt="Pastel de Limón">
-                <h3>Pastel de Limón</h3>
-                <p class="precio">$14.00</p>
-                <button class="ver-mas-btn">Ver más</button>
-                <div class="detalles">
-                    <p>Suave pastel de limón con una crema de limón meringada y decorado con ralladura de limón.</p>
-                </div>
-            </div>
-            <!-- Producto 6 -->
-            <div class="producto">
-                <img src="pastel6.jpg" alt="Pastel de Zanahoria">
-                <h3>Pastel de Zanahoria</h3>
-                <p class="precio">$16.00</p>
-                <button class="ver-mas-btn">Ver más</button>
-                <div class="detalles">
-                    <p>Un pastel delicioso y húmedo con zanahoria rallada, nueces y especias, cubierto con crema de queso.</p>
-                </div>
+
+            <!-- Carrito -->
+            <div id="carrito">
+                <h3>Tu Carrito</h3>
+                <ul id="productosCarrito"></ul>
+                <p>Total: $<span id="totalCarrito">0.00</span></p>
+                <button id="vaciarCarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
             </div>
         </section>
     </main>
 
-    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2025 Dulce Sabor - Todos los derechos reservados</p>
+        <p>&copy; 2025 Dulce Sabor. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Script para mostrar/ocultar los detalles de cada producto
-        document.querySelectorAll('.ver-mas-btn').forEach((button) => {
-            button.addEventListener('click', () => {
-                const detalles = button.nextElementSibling; // el div con la clase "detalles"
-                detalles.classList.toggle('mostrar'); // alterna la visibilidad
+        // Cargar carrito desde localStorage
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        // Mostrar el carrito en la interfaz
+        function actualizarCarrito() {
+            const lista = document.getElementById("productosCarrito");
+            lista.innerHTML = "";
+            let total = 0;
+
+            carrito.forEach((p, index) => {
+                const item = document.createElement("li");
+                item.textContent = `${p.nombre} - $${p.precio.toFixed(2)}`;
+                const eliminarBtn = document.createElement("button");
+                eliminarBtn.textContent = "Eliminar";
+                eliminarBtn.onclick = function () { eliminarDelCarrito(index); };
+                item.appendChild(eliminarBtn);
+                lista.appendChild(item);
+                total += p.precio;
             });
-        });
+
+            document.getElementById("totalCarrito").textContent = total.toFixed(2);
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+
+        // Añadir productos al carrito
+        function añadirAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarrito();
+        }
+
+        // Eliminar producto del carrito
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
+
+        // Vaciar el carrito
+        function vaciarCarrito() {
+            carrito = [];
+            actualizarCarrito();
+        }
+
+        // Mostrar detalles de un producto
+        function verMas(id) {
+            const detalle = document.getElementById(id);
+            detalle.style.display = (detalle.style.display === "none") ? "block" : "none";
+        }
+
+        // Mostrar el carrito al cargar la página
+        window.onload = actualizarCarrito;
     </script>
+
 </body>
 </html>
